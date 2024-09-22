@@ -2,6 +2,21 @@
 #include <stdlib.h>
 #include <string.h>
 
+void printFileContents(const char *filename) {
+    FILE *file = fopen(filename, "r");
+    if (file == NULL) {
+        perror("Error opening file");
+        return;
+    }
+
+    char ch;
+    while ((ch = fgetc(file)) != EOF) {
+        putchar(ch);
+    }
+
+    fclose(file);
+}
+
 int main(int argc, char *argv[]) {
 
     if (argc != 3) {
@@ -40,5 +55,12 @@ int main(int argc, char *argv[]) {
     fclose(secondFile);
 
     printf("Files concatenated successfully.\n");
+
+    printf("\nContents of the first file (%s) after concatenation:\n", firstFileName);
+    printFileContents(firstFileName);
+
+    printf("\nContents of the second file (%s):\n", secondFileName);
+    printFileContents(secondFileName);
+
     return 0;
 }
