@@ -14,7 +14,7 @@ CFLAGS = -Wall -g
 TARGET = traverse
 
 # Source files
-SRC = jonahhHW2.c
+SRC = lab10.c
 
 # Object files (generated from source files)
 OBJ = $(SRC:.c=.o)
