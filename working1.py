@@ -27,37 +27,37 @@ class Paint(object):
         self.root = Tk()
         self.setup()  
 
-        self.pen_button = Button(self.root, text='pen', command=self.use_pen)
+        self.pen_button = Button(self.root, text='Pen', command=self.use_pen, bg="#5C9EAD", fg="white")
         self.pen_button.grid(row=0, column=0, sticky='ew')
 
-        self.brush_button = Button(self.root, text='brush', command=self.use_brush)
+        self.brush_button = Button(self.root, text='Brush', command=self.use_brush, bg="#5C9EAD", fg="white")
         self.brush_button.grid(row=0, column=1, sticky='ew')
 
-        self.color_button = Button(self.root, text='color', command=self.choose_color)
+        self.color_button = Button(self.root, text='Color', command=self.choose_color, bg="#5C9EAD", fg="white")
         self.color_button.grid(row=0, column=2, sticky='ew')
 
-        self.eraser_button = Button(self.root, text='eraser', command=self.use_eraser)
+        self.eraser_button = Button(self.root, text='Eraser', command=self.use_eraser, bg="#5C9EAD", fg="white")
         self.eraser_button.grid(row=0, column=3, sticky='ew')
 
-        self.size_scale = Scale(self.root, from_=1, to=10, orient='horizontal')
+        self.size_scale = Scale(self.root, from_=1, to=10, orient='horizontal', bg="#5C9EAD", fg="white")
         self.size_scale.grid(row=0, column=4, sticky='ew')
 
-        self.line_button = Button(self.root, text='Line', command=self.use_line)
+        self.line_button = Button(self.root, text='Line', command=self.use_line, bg="#5C9EAD", fg="white")
         self.line_button.grid(row=1, column=0, sticky='ew')
 
-        self.poly_button = Button(self.root, text='Polygon', command=self.use_poly)
+        self.poly_button = Button(self.root, text='Polygon', command=self.use_poly, bg="#5C9EAD", fg="white")
         self.poly_button.grid(row=1, column=1, sticky='ew')
 
         self.black_button = Button(self.root, text='', bg='black', activebackground="black")
         self.black_button.grid(row=1, column=2, sticky='ew')
 
-        self.clear_button = Button(self.root, text='clear', command=lambda: self.c.delete("all"))
+        self.clear_button = Button(self.root, text='Clear', command=lambda: self.c.delete("all"), bg="#5C9EAD", fg="white")
         self.clear_button.grid(row=1, column=3, sticky='ew')
 
-        self.save_button = Button(self.root, text='save', command=self.save_file)
+        self.save_button = Button(self.root, text='Save', command=self.save_file, bg="#5C9EAD", fg="white")
         self.save_button.grid(row=1, column=4, sticky='ew')
 
-        self.c = Canvas(self.root, bg='white', width=600, height=600)
+        self.c = Canvas(self.root, bg="#D9D9D9", width=600, height=600)
         self.c.grid(row=2, columnspan=5)
 
         self.var_status = StringVar(value='selected: pen')
