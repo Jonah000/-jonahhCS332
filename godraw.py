@@ -34,31 +34,31 @@ class Paint:
 
     def setup_ui(self):
         """Setup UI components."""
-        self.pen_button = Button(self.root, text='pen', command=self.use_pen)
+        self.pen_button = Button(self.root, text='Pen', command=self.use_pen, bg="#5C9EAD", fg="white")
         self.pen_button.grid(row=0, column=0, sticky='ew')
 
-        self.eraser_button = Button(self.root, text='eraser', command=self.use_eraser)
+        self.eraser_button = Button(self.root, text='Eraser', command=self.use_eraser, bg="#5C9EAD", fg="white")
         self.eraser_button.grid(row=0, column=1, sticky='ew')
 
-        self.color_button = Button(self.root, text='color', command=self.choose_color)
+        self.color_button = Button(self.root, text='Color', command=self.choose_color, bg="#5C9EAD", fg="white")
         self.color_button.grid(row=0, column=2, sticky='ew')
 
-        self.size_scale = Scale(self.root, from_=1, to=10, orient='horizontal')
+        self.size_scale = Scale(self.root, from_=1, to=10, orient='horizontal', bg="#5C9EAD", fg="white")
         self.size_scale.grid(row=0, column=3, sticky='ew')
 
-        self.add_layer_button = Button(self.root, text='Add Layer', command=self.add_layer)
+        self.add_layer_button = Button(self.root, text='Add Layer', command=self.add_layer, bg="#5C9EAD", fg="white")
         self.add_layer_button.grid(row=1, column=0, sticky='ew')
 
-        self.clear_button = Button(self.root, text='Clear Layer', command=self.clear_canvas)
+        self.clear_button = Button(self.root, text='Clear Layer', command=self.clear_canvas, bg="#5C9EAD", fg="white")
         self.clear_button.grid(row=1, column=1, sticky='ew')
 
-        self.save_button = Button(self.root, text='Save', command=self.save_file)
+        self.save_button = Button(self.root, text='Save', command=self.save_file, bg="#5C9EAD", fg="white")
         self.save_button.grid(row=1, column=2, sticky='ew')
 
-        self.merge_button = Button(self.root, text='Merge Layers', command=self.merge_layers)
+        self.merge_button = Button(self.root, text='Merge Layers', command=self.merge_layers, bg="#5C9EAD", fg="white")
         self.merge_button.grid(row=1, column=4, sticky='ew')
 
-        self.flood_fill_button = Button(self.root, text='Flood Fill', command=self.use_flood_fill)
+        self.flood_fill_button = Button(self.root, text='Flood Fill', command=self.use_flood_fill, bg="#5C9EAD", fg="white")
         self.flood_fill_button.grid(row=0, column=4, sticky='ew')
 
         # Listbox for layer selection
